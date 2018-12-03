@@ -1,12 +1,10 @@
 import { SET_VISIBILITY_FILTER, SHOW_ALL } from "../actions/actionTypes";
 
 
-const visibilityReducers = (state = SHOW_ALL, action) => {
-    console.log(state,action);
-    
+const visibilityReducers = (state = SHOW_ALL, action) => {    
     switch (action.type) {
         case SET_VISIBILITY_FILTER:
-            return state.filter;
+            return action.filter;
         default:
             return state;
     }
